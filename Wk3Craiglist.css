@@ -1,0 +1,100 @@
+* {
+    font-family: Garamond, serif;
+    width: 900px;
+    padding: 0;
+    margin: auto;
+}
+
+#BigHeader::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#BigHeader {
+  height: 100px;
+  background-color: #4559eb;
+}
+
+#Main_Title {
+  padding-left: 10px;
+  color: #eee;
+  position: relative;
+  font-size: 60px;
+  bottom: -45px;
+}
+
+#Locations {
+  box-sizing: border-box;
+  width: 180px;
+  margin: 0 10px;
+  padding: 0;
+  font-size: 120%;
+  position: relative;
+  bottom: -3px;
+  float: right;
+}
+
+.Location {
+  text-align: center;
+  display: inline-block;
+  padding: 2px;
+  width: 80px;
+  background-color: #bad2ff;
+}
+
+#SearchBar {
+  width: 190px;
+  margin: 0 5px;
+  padding: 2px 2px 2px 6px;
+  font-size: 120%;
+  background-color: #eee;
+  position: relative;
+  bottom: -2px;
+  float: right;
+}
+
+#CenterMain {
+  margin: 5px;
+  background-color: #ddd;
+}
+
+aside {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  float: left;
+}
+
+main {
+  display: inline-block;
+  position: relative;
+  width: 700px;
+  float: right;
+  background-color: #aaa;
+}
+
+.MainBlockLight {
+  box-sizing: border-box;
+  font-size: 35px;
+  text-align: center;
+  display: inline-block;
+  width: 230px;
+  height: 230px;
+  padding: 80px 0;
+  background-color: #4559eb;
+  color: #eee;
+}
+
+.MainBlockDark {
+  box-sizing: border-box;
+  font-size: 35px;
+  text-align: center;
+  display: inline-block;
+  width: 230px;
+  height: 230px;
+  padding: 80px 0;
+  background-color: #4235bd;
+  color: #eee;
+}
+

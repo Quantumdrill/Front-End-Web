@@ -409,8 +409,6 @@ footer {
   #CharityButton {
     color: #c9d2f2;
     margin-top: 5px;
-    text-align: center;
-    box-sizing: border-box;
     width: 100%;
     height: 100px;
     background-color: #181e36;
@@ -422,13 +420,6 @@ footer {
   #CharityButton:hover {
     background-color: #181e36;
     color: #c9d2f2;
-  }
-  
-  #dividingLine {
-    margin-top: 5px;
-    width: 100%;
-    height: 5px;
-    background-color: #c9d2f2;
   }
   
   footer {

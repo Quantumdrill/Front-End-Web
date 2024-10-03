@@ -1,8 +1,8 @@
 * {
-    font-family: Garamond, serif;
+    font-family: 'Trebuchet MS', sans-serif;
     width: 100%;
     padding: 0;
-    margin: auto;
+    margin: 0;
 }
 
 #BigHeader::after {
@@ -12,16 +12,26 @@
 }
 
 #BigHeader {
-  height: 100px;
-  background-color: #4559eb;
+  position: relative;
+  height: 200px;
+  min-width: 850px;
+  background-color: #181e36;
 }
 
-#Main_Title {
+#MainTitle {
+  font-family: Garamond, serif;
+  box-sizing: border-box;
   padding-left: 10px;
-  color: #eee;
-  position: relative;
-  font-size: 60px;
-  bottom: -45px;
+  color: #fff;
+  position: absolute;
+  font-size: 90px;
+  bottom: -18px;
+}
+
+#LocSearch {
+  position: absolute;
+  height: 30px;
+  bottom: 0;
 }
 
 #Locations {
@@ -30,8 +40,6 @@
   margin: 0 10px;
   padding: 0;
   font-size: 120%;
-  position: relative;
-  bottom: -3px;
   float: right;
 }
 
@@ -40,94 +48,131 @@
   display: inline-block;
   padding: 2px;
   width: 80px;
-  background-color: #bad2ff;
+  background-color:#181e36;
+  color:#c9d2f2;
+}
+
+.Location:hover {
+  background-color: #c9d2f2;
+  color:#181e36;
 }
 
 #SearchBar {
-  width: 190px;
+  width: 250px;
   margin: 0 5px;
   padding: 2px 2px 2px 6px;
   font-size: 120%;
-  background-color: #eee;
-  position: relative;
-  bottom: -2px;
+  background-color: #fff;
   float: right;
+  margin-right: 15px;
 }
 
 #CenterMain {
+  display: flex;
   box-sizing: border-box;
   padding: 5px;
+  height: 560px;
 }
 
 aside {
   position: relative;
-  width: 185px;
+  height: 100%;
+  min-width: 185px;
+  max-width: 185px;
   float: left;
   padding: 0;
 }
 
 main {
-  position: relative;
-  width: 700px;
-  float: right;
+  display: flex;
+  float: left;
+  height: 100%;
 }
 
-.MainFirstTwoLines {
-  box-sizing: border-box;
-  width: 700px;
-  height: 230px;
-  margin-bottom: 5px;
+.mainBoxes {
+  overflow-x: hidden;
+  display: flex;
+  height: 100%;
+  margin-left: 5px;
+  align-items: center;
+  background-color: #c9d2f2;
 }
 
-.MainBlockLight {
+.mainBoxes:hover {
+  background-color: #181e36;
+}
+
+.mainBoxes:hover .mainBoxText {
+  color: #c9d2f2;
+}
+
+.mainBoxText {
   box-sizing: border-box;
-  font-size: 35px;
+  font-size: 32px;
   text-align: center;
-  display: inline-block;
-  width: 230px;
-  height: 230px;
-  padding: 80px 0;
-  background-color: #4559eb;
-  color: #eee;
+  color: #181e36;
 }
 
-.MainBlockDark {
-  box-sizing: border-box;
-  font-size: 35px;
-  text-align: center;
-  display: inline-block;
-  width: 230px;
-  height: 230px;
-  padding: 80px 0;
-  background-color: #4235bd;
-  color: #eee;
-}
-
-.MainBlockRect {
-  box-sizing: border-box;
-  font-size: 35px;
-  text-align: center;
-  display: inline-block;
-  width: 347px;
-  height: 115px;
-  padding: 38px 0;
-  background-color: #4559eb;
-  color: #eee;
+@media (max-width: 1360px) and (min-width: 450px){
+  #CenterMain {
+    display: flex;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 665px;
+  }
+  
+  aside {
+    position: relative;
+    min-width: 185px;
+    max-width: 185px;
+    float: left;
+    padding: 0;
+    height: 100%;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    height: 100%;
+    min-width: 650px;
+  }
+  
+  .mainBoxes {
+    overflow-x: hidden;
+    display: flex;
+    flex-basis: 49%;
+    max-width: 600px;
+    height: 160px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    background-color: #c9d2f2;
+  }
+  
+  .mainBoxText {
+    box-sizing: border-box;
+    font-size: 32px;
+    text-align: center;
+    color: #181e36;
+  }
+  
 }
 
 #MyPost {
   box-sizing: border-box;
+  position: relative;
   width: 100%;
   height: 230px;
   margin: 0;
-  border: solid #bad2ff;
+  border: solid #c9d2f2;
   padding: 0;
 }
 
 #MyAccount {
   box-sizing: border-box;
-  background-color: #bad2ff;
-  font-size: 80%;
+  background-color: #c9d2f2;
+  font-size: 140%;
   width: 100%;
   padding: 2px;
   padding-top: 20px;
@@ -135,39 +180,258 @@ main {
 
 #MyPostTitle {
   padding: 2px;
-  font-size: 140%;
+  font-size: 85%;
 }
 
 .MyPostLinks {
   padding-left: 20px;
+  font-size: 120%;
 }
 
 #PostButton {
-  color: #eee;
+  color: #fff;
   text-align: center;
   font-size: 200%;
   box-sizing: border-box;
-  background-color: #4235bd;
-  width: 175px;
-  position: relative;
-  bottom: -49px;
+  background-color: #181e36;
+  width: 172px;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+#PostButton:hover {
+  color: #eee;
+  background-color: #29335e;
 }
 
 #Calendar {
-  box-sizing: border-box;
-  margin-top: 5px;
+  margin: auto;
   width: 100%;
-  height: 170px;
-  border: solid #bad2ff;
 }
 
 #CharityButton {
+  color: #181e36;
+  margin-top: 5px;
   text-align: center;
   box-sizing: border-box;
   width: 100%;
   height: 70px;
-  position: relative;
-  background-color: #bad2ff;
+  background-color: #c9d2f2;
   padding-top: 15px;
-  bottom: -78px;
+  position: absolute;
+  bottom: 0;
+}
+
+#CharityButton:hover {
+  background-color: #181e36;
+  color: #c9d2f2;
+}
+
+#dividingLine {
+  width: 100%;
+  height: 5px;
+  background-color: #c9d2f2;
+}
+
+footer {
+  position: relative;
+  min-height: 160px;
+  background-color: #181e36;
+}
+
+@media (max-width: 450px) {
+
+  #BigHeader {
+    position: relative;
+    height: 270px;
+    width: 100%;
+    min-width: 0;
+    background-color:#181e36;
+  }
+
+  #MainTitle {
+    text-align: center;
+    color:#181e36;
+    font-size: 60px;
+    padding-left: 0px;
+    position: fixed;
+    height: 90px;
+    background-color: #fff;
+    padding-top :10px;
+    padding-bottom :10px;
+    top: 0;
+    z-index: 1;
+  }
+  
+  #LocSearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 30px;
+    top: 100px;
+  }
+  
+  #Locations {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 180%;
+    float: right;
+    background-color:#181e36;
+  }
+  
+  .Location {
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    padding: 5px;
+    width: 35%;
+    background-color:rgba(0,0,0,0);
+    color:#c9d2f2;
+  }
+  
+  #SearchBar {
+    text-align: center;
+    color: #bbb;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 180%;
+    background-color: #fff;
+  }
+  
+  #CenterMain {
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    height: 1640px;
+
+  }
+  
+  aside {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    float: left;
+  }
+  
+  main {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 1200px;
+    margin-top: 10px;
+  }
+  
+  .mainBoxes {
+    overflow-x: hidden;
+    display: flex;
+    margin-left: 0;
+    margin-top: 5px;
+    align-items: center;
+    background-color: #181e36;
+  }
+  
+  .mainBoxes:hover {
+    background-color: #181e36;
+  }
+  
+  .mainBoxes:hover .mainBoxText {
+    color: #c9d2f2;
+  }
+  
+  .mainBoxText {
+    box-sizing: border-box;
+    font-size: 32px;
+    text-align: center;
+    color:#c9d2f2;
+  }
+
+  #MyPost {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    top: -70px;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    border-width: 0;
+    padding: 0;
+  }
+  
+  #MyAccount {
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(0,0,0,0);
+    color:#c9d2f2;
+    font-size: 180%;
+    width: 80%;
+    padding: 2px;
+    padding-top: 20px;
+  }
+  
+  #MyPostTitle {
+    display: none;
+  }
+  
+  .MyPostLinks {
+    display: none;
+  }
+  
+  #PostButton {
+    display: none;
+  }
+  
+  #PostButton:hover {
+    color: #eee;
+    background-color: #29335e;
+  }
+  
+  #Calendar {
+    position: absolute;
+    bottom: 45px;
+  }
+  
+  #CharityButton {
+    color: #c9d2f2;
+    margin-top: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    background-color: #181e36;
+    position: absolute;
+    padding-top: 30px;
+    bottom: 0;
+  }
+  
+  #CharityButton:hover {
+    background-color: #181e36;
+    color: #c9d2f2;
+  }
+  
+  #dividingLine {
+    margin-top: 5px;
+    width: 100%;
+    height: 5px;
+    background-color: #c9d2f2;
+  }
+  
+  footer {
+    min-height: 200px;
+  }
 }

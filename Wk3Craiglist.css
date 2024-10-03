@@ -55,21 +55,28 @@
 }
 
 #CenterMain {
-  margin: 5px;
-  background-color: #ddd;
+  box-sizing: border-box;
+  padding: 5px;
 }
 
 aside {
   position: relative;
-  width: 195px;
+  width: 185px;
   float: left;
+  padding: 0;
 }
 
 main {
   position: relative;
   width: 700px;
   float: right;
-  background-color: #aaa;
+}
+
+.MainFirstTwoLines {
+  box-sizing: border-box;
+  width: 700px;
+  height: 230px;
+  margin-bottom: 5px;
 }
 
 .MainBlockLight {
@@ -96,10 +103,71 @@ main {
   color: #eee;
 }
 
+.MainBlockRect {
+  box-sizing: border-box;
+  font-size: 35px;
+  text-align: center;
+  display: inline-block;
+  width: 347px;
+  height: 115px;
+  padding: 38px 0;
+  background-color: #4559eb;
+  color: #eee;
+}
+
 #MyPost {
   box-sizing: border-box;
   width: 100%;
+  height: 230px;
   margin: 0;
   border: solid #bad2ff;
+  padding: 0;
+}
 
+#MyAccount {
+  box-sizing: border-box;
+  background-color: #bad2ff;
+  font-size: 80%;
+  width: 100%;
+  padding: 2px;
+  padding-top: 20px;
+}
+
+#MyPostTitle {
+  padding: 2px;
+  font-size: 140%;
+}
+
+.MyPostLinks {
+  padding-left: 20px;
+}
+
+#PostButton {
+  color: #eee;
+  text-align: center;
+  font-size: 200%;
+  box-sizing: border-box;
+  background-color: #4235bd;
+  width: 175px;
+  position: relative;
+  bottom: -49px;
+}
+
+#Calendar {
+  box-sizing: border-box;
+  margin-top: 5px;
+  width: 100%;
+  height: 170px;
+  border: solid #bad2ff;
+}
+
+#CharityButton {
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  background-color: #bad2ff;
+  padding-top: 15px;
+  bottom: -78px;
 }

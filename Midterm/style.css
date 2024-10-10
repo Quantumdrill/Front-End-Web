@@ -1,0 +1,335 @@
+@font-face {
+    font-family: CalFB;
+    src: url(Californian_FB_Regular.ttf);
+}
+
+* {
+    font-family: CalFB;
+    margin: 0;
+}
+
+#BG {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    z-index: -4;
+}
+
+.TopColor {
+    background-color: #0c0f24;
+}
+
+.BottomColor {
+    background-color: #31354a;
+}
+
+.Top1 {
+    height: 30.83%;
+}
+.Top2 {
+    height: 13.24%;
+}
+.Top3 {
+    height: 7.59%;
+}
+.Top4 {
+    height: 3.33%;
+}
+.Top5 {
+    height: 1.57%;
+}
+.Division {
+    height: 5.1%;
+}
+.Bottom {
+    height: 25.55%;
+}
+
+header {
+    display: flex;
+    min-height: 30.83vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+h1 {
+    position: relative;
+    bottom: -0.15em;
+    text-align: center;
+    font-weight: normal;
+    font-size: 10vw;
+    color: #bad2ff;
+}
+
+#HeaderInfo {
+    position: relative;
+    bottom: -0.8vw;
+    width: 100%;
+    min-height: 10vh;
+    z-index: 3;
+}
+
+#InputSleepLocator {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 10vh;
+}
+
+#InputSleep {
+    font-size: 3vw;
+    font-weight: normal;
+    color: #bad2ff;
+}
+
+#HeaderMenu {
+    position: absolute;
+    bottom: 0;
+    right: 6vw;
+}
+
+#MenuIcon {
+    float: right;
+    border-radius: 0.4vw;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    font-size: 3vw;
+    color: #bad2ff;
+    background-color: rgba(0,0,0,0);
+    transition: 0.2s;
+}
+
+nav {
+    display: none;
+    float: right;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-height: 3.5vw;
+}
+
+#MenuIconLocator:hover nav {
+    display: flex;
+}
+
+.NavIcon {
+    color:#bad2ff;
+    width: 2.5vw;
+    height: 2.5vw;
+    padding: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.NavText {
+    display: none;
+    text-align: center;
+    color:#bad2ff;
+    width: 100%;
+    font-size: 1.5vw;
+    transition: 0.2s;
+}
+
+
+.NavRefresh:hover {
+    background-color: #31354a;
+    border-radius: 0.4vw;
+    transition: 0.2s;
+}
+
+.NavAlgorithm:hover {
+    background-color: #31354a;
+    border-radius: 0.4vw;
+    transition: 0.2s;
+}
+
+.NavRecords:hover {
+    background-color: #31354a;
+    border-radius: 0.4vw;
+    transition: 0.2s;
+}
+
+.NavHelp:hover {
+    background-color: #31354a;
+    border-radius: 0.4vw;
+    transition: 0.2s;
+}
+
+.NavRefresh:hover .NavTextRefresh {
+    position: relative;
+    right: 40%;
+    top: 10%;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.NavAlgorithm:hover .NavTextAlgorithm {
+    width: 15vw;
+    position: relative;
+    right: 270%;
+    top: 10%;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.NavRecords:hover .NavTextRecords {
+    display: inline-block;
+    width: 15vw;
+    position: relative;
+    right: 250%;
+    top: 10%;
+    transition: 0.2s;
+}
+
+.NavHelp:hover .NavTextHelp {
+    display: inline-block;
+    width: 15vw;
+    position: relative;
+    right: 250%;
+    top: 10%;
+    transition: 0.2s;
+}
+
+#BarsSection {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Bars {
+    position: relative;
+    width: 14.29%;
+    background-color: #bad2ff;
+}
+
+@keyframes Bar1 {
+    from {height: 0vh;}
+    to {height: 30vh;}
+}
+@keyframes Bar2 {
+    from {height: 0vh;}
+    to {height: 50vh;}
+}
+@keyframes Bar3 {
+    from {height: 0vh;}
+    to {height: 60vh;}
+}
+@keyframes Bar4 {
+    from {height: 0vh;}
+    to {height: 53vh;}
+}
+@keyframes Bar5 {
+    from {height: 0vh;}
+    to {height: 40vh;}
+}
+@keyframes Bar6 {
+    from {height: 0vh;}
+    to {height: 45vh;}
+}
+@keyframes Bar7 {
+    from {height: 0vh;}
+    to {height: 68vh;}
+}
+
+.Bar1 {
+    height: 0;
+    animation-name: Bar1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.Bar2 {
+    height: 0;
+    animation-name: Bar2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+.Bar3 {
+    height: 0;
+    animation-name: Bar3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+}
+.Bar4 {
+    height: 0;
+    animation-name: Bar4;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+.Bar5 {
+    height: 0;
+    animation-name: Bar5;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+.Bar6 {
+    height: 0;
+    animation-name: Bar6;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+.Bar7 {
+    height: 0;
+    animation-name: Bar7;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    h1 {
+        position: relative;
+        bottom: -0.15em;
+        text-align: center;
+        font-weight: normal;
+        font-size: 18vh;
+        color: #eee;
+        color: #bad2ff;
+    }
+
+    #HeaderInfo {
+        bottom: -3.6vh;
+    }
+
+    #InputSleep {
+        font-size: 5vh;
+    }
+
+    .Bars {
+        
+    }
+
+    .NavText {
+        font-size: 2.7vh;
+    }
+
+    #MenuIcon {
+        border-radius: 0.72vh;
+        padding-left: 2.16vh;
+        padding-right: 2.16vh;
+        font-size: 5vh
+    }
+
+    .NavIcon {
+        width: 4.5vh;
+        height: 4.5vh;
+        padding: 0.9vh;
+        margin-left: 0.9vh;
+        margin-right: 0.9vh;
+    }
+
+    nav {
+        min-height: 6.3vh;
+    }
+}

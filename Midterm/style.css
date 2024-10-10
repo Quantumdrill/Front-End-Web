@@ -20,10 +20,12 @@
 
 .TopColor {
     background-color: #0c0f24;
+    animation: Nm_Gd_1 1.5s 1s forwards;
 }
 
 .BottomColor {
     background-color: #31354a;
+    animation: Nm_Gd_2 1.5s 1s forwards;
 }
 
 .Top1 {
@@ -63,6 +65,7 @@ h1 {
     font-weight: normal;
     font-size: 10vw;
     color: #bad2ff;
+    animation: Nm_Gd_4 1.5s 1s forwards;
 }
 
 #HeaderInfo {
@@ -84,6 +87,7 @@ h1 {
     font-size: 3vw;
     font-weight: normal;
     color: #bad2ff;
+    animation: Nm_Gd_4 1.5s 1s forwards;
 }
 
 #HeaderMenu {
@@ -97,8 +101,9 @@ h1 {
     border-radius: 0.4vw;
     padding-left: 1.2vw;
     padding-right: 1.2vw;
-    font-size: 3vw;
+    font-size: 3.09vw;
     color: #bad2ff;
+    animation: Nm_Gd_4 1.5s 1s forwards;
     background-color: rgba(0,0,0,0);
     transition: 0.2s;
 }
@@ -127,33 +132,32 @@ nav {
 .NavText {
     display: none;
     text-align: center;
-    color:#bad2ff;
+    color:#0f0f0f;
     width: 100%;
     font-size: 1.5vw;
     transition: 0.2s;
 }
 
-
 .NavRefresh:hover {
-    background-color: #31354a;
+    background-color: #d95d41;
     border-radius: 0.4vw;
     transition: 0.2s;
 }
 
 .NavAlgorithm:hover {
-    background-color: #31354a;
+    background-color: #d95d41;
     border-radius: 0.4vw;
     transition: 0.2s;
 }
 
 .NavRecords:hover {
-    background-color: #31354a;
+    background-color: #d95d41;
     border-radius: 0.4vw;
     transition: 0.2s;
 }
 
 .NavHelp:hover {
-    background-color: #31354a;
+    background-color: #d95d41;
     border-radius: 0.4vw;
     transition: 0.2s;
 }
@@ -206,7 +210,7 @@ nav {
 .Bars {
     position: relative;
     width: 14.29%;
-    background-color: #bad2ff;
+    background-color: #ffcdc1;
 }
 
 @keyframes Bar1 {
@@ -227,7 +231,7 @@ nav {
 }
 @keyframes Bar5 {
     from {height: 0vh;}
-    to {height: 40vh;}
+    to {height: 73vh;}
 }
 @keyframes Bar6 {
     from {height: 0vh;}
@@ -243,6 +247,7 @@ nav {
     animation-name: Bar1;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    animation-delay: 0s;
 }
 .Bar2 {
     height: 0;
@@ -287,6 +292,42 @@ nav {
     animation-delay: 1.2s;
 }
 
+@keyframes Nm_Gd_1 {
+    from {background-color: #0c0f24;}
+    to {background-color: #ff7555;}
+}
+
+@keyframes Nm_Gd_2 {
+    from {background-color: #31354a;}
+    to {background-color: #d95d41;}
+}
+
+@keyframes Nm_Gd_3 {
+    from {background-color: #bad2ff;}
+    to {background-color: #ffcdc1;}
+}
+
+@keyframes Nm_Gd_4 {
+    from {color: #bad2ff;}
+    to {color: #0f0f0f;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-aspect-ratio: 16/9) {
     h1 {
         position: relative;
@@ -318,7 +359,7 @@ nav {
         border-radius: 0.72vh;
         padding-left: 2.16vh;
         padding-right: 2.16vh;
-        font-size: 5vh
+        font-size: 5.56vh
     }
 
     .NavIcon {

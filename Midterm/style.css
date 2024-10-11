@@ -104,11 +104,13 @@ h1 {
 }
 
 #MenuIcon {
+    font-weight: normal;
     float: right;
-    border-radius: 0.4vw;
     padding-left: 1.2vw;
     padding-right: 1.2vw;
-    font-size: 3.09vw;
+    padding-bottom: 0.5vw;
+    padding-top: 0.5vw;;
+    font-size: 2.2vw;
     color: #bad2ff;
     animation: Nm_Gd_4 1.5s 1s forwards;
     background-color: rgba(0,0,0,0);
@@ -174,7 +176,7 @@ nav {
 .NavRefresh:hover .NavTextRefresh {
     position: relative;
     right: 40%;
-    top: 10%;
+    top: 0.3vw;
     display: inline-block;
     transition: 0.2s;
 }
@@ -183,7 +185,7 @@ nav {
     width: 15vw;
     position: relative;
     right: 270%;
-    top: 10%;
+    top: 0.3vw;
     display: inline-block;
     transition: 0.2s;
 }
@@ -193,7 +195,7 @@ nav {
     width: 15vw;
     position: relative;
     right: 250%;
-    top: 10%;
+    top: 0.3vw;
     transition: 0.2s;
 }
 
@@ -202,7 +204,7 @@ nav {
     width: 15vw;
     position: relative;
     right: 250%;
-    top: 10%;
+    top: 0.3vw;
     transition: 0.2s;
 }
 
@@ -321,6 +323,9 @@ nav {
     to {color: #0f0f0f;}
 }
 
+#TitleBreak {
+    display: none;
+}
 
 
 
@@ -368,7 +373,9 @@ nav {
         border-radius: 0.72vh;
         padding-left: 2.16vh;
         padding-right: 2.16vh;
-        font-size: 5.56vh
+        padding-bottom: 0.9vh;
+        padding-top: 0.9vh;;
+        font-size: 3.96vh;
     }
 
     .NavIcon {
@@ -381,5 +388,49 @@ nav {
 
     nav {
         min-height: 6.3vh;
+    }
+}
+
+@media (max-aspect-ratio: 3/4) {
+    h1 {
+        position: relative;
+        bottom: -0.15em;
+        text-align: center;
+        font-weight: normal;
+        font-size: 15vw;
+        color: #eee;
+        color: #bad2ff;
+    }
+
+    #TitleBreak {
+        display: block;
+    }
+
+    #HeaderInfo {
+        bottom: -0.8vw;
+        min-height: 5vh;
+        max-height: 5vh;
+    }
+
+    #InputSleepLocator {
+        min-height: 5vh;
+        max-height: 5vh;
+    }
+
+    #InputSleep {
+        font-size: 6vw;
+    }
+
+    .Input {
+        height: 4vw;
+        bottom: 0.6vw;
+    }
+
+    #MenuIconLocator:hover nav {
+        display: none;
+    }
+
+    #MenuIcon {
+        font-size: 4.4vw;
     }
 }

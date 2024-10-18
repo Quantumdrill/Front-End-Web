@@ -1,0 +1,15 @@
+#goBtn, #clearBtn, #inpt{
+
+    border-width: 0;
+    background-color: antiquewhite;
+}
+
+#goBtn, #clearBtn {
+
+    display: none;
+}
+#goBtn:hover, #clearBtn:hover{
+
+    border-width: 0;
+    background-color:aquamarine;
+}

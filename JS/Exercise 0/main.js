@@ -12,3 +12,7 @@ inpt.oninput = function(){
         output(inpt.value);
     }
 }
+
+inptColor.oninput = function(){
+    console.log(inptColor.value);
+}

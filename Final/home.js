@@ -100,6 +100,22 @@ function MenuAppear () {
         easing: "easeInOutQuad",
     })
 }
+function MenuDisappear () {
+    anime({
+        targets: "#Menu .HomeMenuItem",
+        translateX: "0",
+        duration: 200,
+        delay: anime.stagger(150),
+        easing: "easeInOutQuad",
+    });
+    anime({
+        targets: "#BlackCover",
+        opacity: ["60%", "100%"],
+        duration: 300,
+        delay: 200,
+        easing: "easeInOutQuad",
+    });
+}
 function MenuHover (e){
     MenuItemHoveredState = 1;
     for (const MenuItem of MenuItems){
@@ -107,6 +123,15 @@ function MenuHover (e){
             anime({
                 targets: MenuItem,
                 color: "hsla(0,0%,100%,0.4)",
+                duration: 120,
+                easing: "easeInOutQuad",
+            })
+            
+        } else {
+            BGname = document.getElementById(`${MenuItem.id}BG`);
+            anime({
+                targets: BGname,
+                height: "40%",
                 duration: 120,
                 easing: "easeInOutQuad",
             })
@@ -122,6 +147,15 @@ function MenuUnhover (e){
                 duration: 120,
                 easing: "easeInOutQuad",
             })
+        } else {
+            BGname = document.getElementById(`${MenuItem.id}BG`);
+            console.log(BGname);
+            anime({
+                targets: BGname,
+                height: "0%",
+                duration: 120,
+                easing: "easeInOutQuad",
+            })
         }
     }
 }
@@ -131,6 +165,23 @@ const MenuItems = document.getElementsByClassName("HomeMenuItem");
 setTimeout(()=>{
     MenuText.addEventListener("mouseenter", MenuAppear)
     MenuText.addEventListener("mousedown", MenuAppear)
+    MenuText.addEventListener("mouseover", ()=>{
+        anime({
+            targets: "#MenuText",
+            color: "hsla(0,0%,100%,1)",
+            duration: 1000,
+            easing: "easeOutBack",
+        });
+    })
+    MenuText.addEventListener("mouseout", ()=>{
+        anime({
+            targets: "#MenuText",
+            color: "hsla(0,0%,100%,0.4)",
+            duration: 1000,
+            easing: "easeOutBack",
+        });
+    })
     for (const MenuItem of MenuItems){MenuItem.addEventListener("mouseenter", MenuHover)}
     for (const MenuItem of MenuItems){MenuItem.addEventListener("mouseleave", MenuUnhover)}
+    for (const MenuItem of MenuItems){MenuItem.addEventListener("click", MenuDisappear)}
 }, 1500);

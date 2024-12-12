@@ -78,6 +78,7 @@ menu {
 }
 
 .HomeMenuItem {
+    z-index: 3;
     color: #fff;
     text-decoration: none;
     font-style: normal;
@@ -87,12 +88,46 @@ menu {
     translate: 84vw;
 }
   
+#AboutMeBG {
+    z-index: 1;
+    position: fixed;
+    bottom: 0em;
+    background-color: hsla(0,0%,100%,0.3);
+    width: 100vw;
+    right: 0;
+}
+#ContactBG {
+    z-index: 1;
+    position: fixed;
+    bottom: 0em;
+    background-color: hsla(0,0%,100%,0.3);
+    width: 100vw;
+    right: 0;
+}
+#OtherPBG {
+    z-index: 1;
+    position: fixed;
+    bottom: 0em;
+    background-color: hsla(0,0%,100%,0.3);
+    width: 100vw;
+    right: 0;
+}
+#GalleryBG {
+    z-index: 1;
+    position: fixed;
+    bottom: 0em;
+    background-color: hsla(0,0%,100%,0.3);
+    width: 100vw;
+    right: 0;
+}
+
 #Gallery {
     font-size: 13vw;
 }
 
 #OtherP {
     display: flex;
+    flex-direction: row-reverse;
 }
 #Contact {
     font-size: 6vw;

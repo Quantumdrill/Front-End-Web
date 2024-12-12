@@ -33,7 +33,7 @@ body {
 
 #OrderIndication {
     rotate: -90deg;
-    color: #fff;
+    color: rgb(199, 207, 204);
     font-size: 9vh;
     text-align: center;
     line-height: 1em;
@@ -129,24 +129,47 @@ body {
 
 .GalleryCard {
     margin: 1vw;
-    background-color: hsla(0, 0%, 100%, 1);
+    border-style: solid;
+    border-color: rgb(199, 207, 204);
     min-width: 20vw;
     height: 20vw;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GalleryCardCover {
+    min-width: 20vw;
+    height: 20vw;
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+}
+
+.GalleryCardInfo {
+    color: rgb(199, 207, 204);
+    font-size: 1.2vw;
+    opacity: 0;
+    z-index: 1;
 }
 .GalleryTitle {
     margin: 1vw;
-    background-color: hsla(0, 0%, 100%, 0.8);
     min-width: 42vw;
-    height: 5vw;
-    
+    background-color: rgba(199, 207, 204, 0.3);
+    height: 2vw;
+    display: flex;
+    align-items: end;
+    margin-top: 4vw;
+}
+
+.GalleryTitleText {
+    font-size: 3vw;
+    color: rgb(199, 207, 204);
 }
 
 #ScrollMenuWindow {
     position: fixed;
     height: 60vh;
     width: 25vw;
-    background-color: hsla(212, 82%, 38%, 0.2);
     right: 12vw;
     bottom: 5vh;
     overflow: scroll;
@@ -169,6 +192,16 @@ body {
 
 .ScrollMenuCard {
     margin: 0 0 1.5vw 0;
-    background-color: hsla(0, 0%, 100%, 1);
+    background-color: rgb(199, 207, 204);
     min-height: 5vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.MenuCardText {
+    font-size: 1.6vw;
+
+}
+

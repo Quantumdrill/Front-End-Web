@@ -1,8 +1,10 @@
+
+
 function OrderBtnHover (){
     anime({
         targets: "#ChangeOrderBtnBG",
         height: "100%",
-        duration: 200,
+        duration: 140,
         easing: "easeInOutCubic",
     });
     anime({
@@ -10,7 +12,7 @@ function OrderBtnHover (){
         color: "rgb(1, 13, 10)",
         duration: 40,
         easing: "easeInOutCubic",
-        delay: 80,
+        delay: 50,
     })
 }
 
@@ -18,7 +20,7 @@ function OrderBtnUnhover (){
     anime({
         targets: "#ChangeOrderBtnBG",
         height: "0%",
-        duration: 200,
+        duration: 140,
         easing: "easeInOutCubic",
     });
     anime({
@@ -26,7 +28,7 @@ function OrderBtnUnhover (){
         color: "#fff",
         duration: 40,
         easing: "easeInOutCubic",
-        delay: 80,
+        delay: 50,
     })
 }
 
@@ -49,15 +51,19 @@ function OrderChange (){
     });
     if (OrderStateIfCollection === true){
         setTimeout(()=>{OrderIndication.textContent = "BY TIME ORDER"},200);
-        setTimeout(()=>{ChangeOrderBtnText.textContent = "CHANGE TO COLLECTION ORDER"},200);
+        setTimeout(()=>{ChangeOrderBtnText.textContent = "SWITCH TO COLLECTION ORDER"},200);
         
         OrderStateIfCollection = false;
     } else {
         setTimeout(()=>{OrderIndication.textContent = "BY COLLECTION"},200);
-        setTimeout(()=>{ChangeOrderBtnText.textContent = "CHANGE TO TIME ORDER"},200);
+        setTimeout(()=>{ChangeOrderBtnText.textContent = "SWITCH TO TIME ORDER"},200);
         OrderStateIfCollection = true;
     };
     
+}
+
+function Scroll (){
+
 }
 
 ChangeOrderBtn.addEventListener("mouseenter",OrderBtnHover);

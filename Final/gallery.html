@@ -6,27 +6,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Gravitas+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
     <script src="anime.min.js"></script>
     <script src="gallery.js" defer></script>
+    <script type="module" src="sanity.mjs"></script>
     <title>Gallery</title>
 </head>
 <body ID="GalleryBG">
     <h1 ID="GalleryText" class="FatFont">GALLERY</h1>
     <h2 ID="OrderIndication" class="FatFont">BY COLLECTION</h2>
     <div ID="ChangeOrderBtn" class="RegularFont">
-        <p ID="ChangeOrderBtnText">CHANGE TO TIME ORDER</p>
+        <p ID="ChangeOrderBtnText">SWITCH TO TIME ORDER</p>
         <div ID="ChangeOrderBtnBG"></div>
         <div ID="ChangeOrderBtnTransition"></div>
     </div>
     <div ID="TransparentCover"></div>
     <main ID="MainGalleryWindow">
         <div ID="GalleryLongPage">
+            <div class="GalleryTitle"></div>
             <div class="GalleryCard"></div>
             <div class="GalleryCard"></div>
             <div class="GalleryCard"></div>
             <div class="GalleryCard"></div>
             <div class="GalleryCard"></div>
+            <div class="GalleryTitle"></div>
             <div class="GalleryCard"></div>
             <div class="GalleryCard"></div>
             <div class="GalleryCard"></div>

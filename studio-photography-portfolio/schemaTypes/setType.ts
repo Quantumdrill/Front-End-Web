@@ -15,8 +15,22 @@ export const setType = defineType({
     }),
     defineField({
       name: 'collection',
-      type: 'reference',
-      to: [{type: 'collection'}],
+      type: 'array',
+      of: [{
+        type: 'reference',
+        to: [{type: 'collection'}],
+      }]
     }),
+    defineField({
+      name: 'description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'image',
+      type: 'array',
+      of: [{
+        type: 'image'
+      }],
+    })
   ],
 })

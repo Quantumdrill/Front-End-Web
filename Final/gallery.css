@@ -153,6 +153,8 @@ body {
     opacity: 0;
     z-index: 1;
     pointer-events: none;
+    max-width: 20vw;
+    text-align: center;
 }
 .GalleryTitle {
     margin: 1vw;
